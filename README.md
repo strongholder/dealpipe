@@ -45,3 +45,48 @@ Expectation:
 ## Implementation
 
 Use the `dagster` python tool to implement a well-tested data pipeline that implements all requirements.
+Dagster provides a very nice pipeline development and debugging interface called `dagit` which makes it easy to interactively see what the pipeline does at each step.
+
+# Development setup
+
+In order to start developing you need to have the Python (3.9.x) interpreter installed on your system, you can use the [pyenv project](https://github.com/pyenv/pyenv) to manage multiple versions of python.
+Then you need to install the [poetry dependency management tool](https://python-poetry.org/).
+After you have the prerequisites installed you need to initialize your virtual environment by changing to the project's directory (brady) and executing the following command:
+```
+poetry install
+```
+
+That's it. Every time you want to work within your virtual environment you just need to activate it by executing the command:
+```
+poetry shell
+```
+
+For more instructuons on poetry, please see the guide on [https://python-poetry.org/](https://python-poetry.org/)
+
+### Running the examples in dagit UI
+
+Once you've set up your virtual environment and activated it you can run and debug the pipeline
+There are configuration presets which you can use to run the pipeline - they are placed in the 'presets' directory. 
+You can easily run the pipeline with all configuration presets in `dagit` by starting it like so:
+```
+dagit -f dealpipe/process_deals.py -h 0.0.0.0 -p 3000
+```
+
+Click [this link to see the Pipeline DAG Definition](http://localhost:3000/workspace/__repository__process_deals@process_deals.py/pipelines/process_deals/)
+
+When you are ready to run the pipeline navigate to the playground by opening the following link:
+[Dagit pipeline playground](http://localhost:3000/workspace/__repository__process_deals@process_deals.py/pipelines/process_deals/playground)
+Now just pick the desired preset from the `Preset` dropdown and then hit the `Launch Execution` button (bottom right).
+
+After you click the `Launch Execution` button the pipeline is started and you can see the execution chart and log in real time.
+The pipeline defines custom events that could be used to view interactive state reports in the form of markdown for each step.
+
+Here are some screenshots:
+![Timeline UI](img/screen1.png)
+![Custom markdown validation report popup](img/screen2.png)
+![Error report dataframe](img/screen3.png)
+
+### TODO
+
+* Unit Tests (mostly of the solids)
+* Refactor the pipeline to smaller python modules

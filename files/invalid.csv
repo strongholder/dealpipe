@@ -1,0 +1,10 @@
+DealName,D1,D2,D3,D4,D5,IsActive,CountryCode,CurrencyCode,CompanyId
+Kindle Paperwhite,12.22322,15.33333,18.0001,9.999999,5.3,Yes,USA,USD,1
+Kindle,,15.33333,18.0001,9.999999,5.3,No,USA,USD,1
+Surface Pro,123.22,11,22.12222,14.2,123123.1231,Yes,USA,USD,2
+Glass,-12.33,221.22,,5.33,11.2,yes,USA,USD,3
+Airbus A320,22219387192,,,,,no,BGR,BGN,4
+Item,122.3314453,,,,,Yes,GBR,,5
+Item 1,125,,,,,Y,,GBP,5
+Item 2,125,,,,,N,invalid,GBP,5
+,,invalid,invalid,invalid,invalid,invalid,invalid,invalid,invalid
