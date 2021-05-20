@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import pandas as pd
-from dagster import SolidExecutionContext, solid
+from dagster import AssetMaterialization, EventMetadata, Output, SolidExecutionContext, solid
 from pandas import DataFrame
 
 
@@ -22,3 +22,10 @@ def save_error_report(context: SolidExecutionContext, df: DataFrame):
     errors_column = "O:O"
     worksheet.set_column(errors_column, width=55, cell_format=wrap_format)
     writer.save()
+
+    yield AssetMaterialization(
+        asset_key="errors_excel_file",
+        description="Excel row-wise aggregate error report",
+        metadata={"errors_excel_file_path": EventMetadata.path(errors_excel_file)},
+    )
+    yield Output(None)
