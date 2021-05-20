@@ -89,6 +89,10 @@ Here are some screenshots:
 ![Custom markdown validation report popup](img/screen2.png)
 ![Error report dataframe](img/screen3.png)
 
+Output artifac lin  k 4rfvre recorded 
+![Asset Materialization link in Event Log](img/asset_materialization1.png)
+![Asset Materialization View](img/asset_materialization2.png)
+
 ### TODO
 
 * Unit Tests (mostly of the solids)
