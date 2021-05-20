@@ -81,6 +81,9 @@ Now just pick the desired preset from the `Preset` dropdown and then hit the `La
 After you click the `Launch Execution` button the pipeline is started and you can see the execution chart and log in real time.
 The pipeline defines custom events that could be used to view interactive state reports in the form of markdown for each step.
 
+If there are any errors, the following Excel report, with row-wise errors, is generated:
+![Excel Error Report](img/excel_error_report.png)
+
 Here are some screenshots:
 ![Timeline UI](img/screen1.png)
 ![Custom markdown validation report popup](img/screen2.png)
@@ -89,4 +92,3 @@ Here are some screenshots:
 ### TODO
 
 * Unit Tests (mostly of the solids)
-* Refactor the pipeline to smaller python modules
