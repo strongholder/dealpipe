@@ -29,7 +29,7 @@ COL_TYPES = {
     output_defs=[OutputDefinition(dagster_type=DealsDataFrame)],
 )
 def postprocess(context: SolidExecutionContext, df: DataFrame, deals_lookup: LookupDict, valid: bool):
-    df["CompanyName"] = df.apply(lambda row: deals_lookup["companies"][row["CompanyId"]], axis="columns")
+    df["CompanyName"] = df["CompanyId"].map(lambda x: deals_lookup["companies"][x])
 
     df = df[list(COL_TYPES.keys())].astype(COL_TYPES)
 

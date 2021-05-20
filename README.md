@@ -89,10 +89,14 @@ Here are some screenshots:
 ![Custom markdown validation report popup](img/screen2.png)
 ![Error report dataframe](img/screen3.png)
 
-Output artifac lin  k 4rfvre recorded 
+Output artifacts, such as files, are recorded in the form of Asset Materializations:
 ![Asset Materialization link in Event Log](img/asset_materialization1.png)
 ![Asset Materialization View](img/asset_materialization2.png)
 
-### TODO
+### Running the tests
 
-* Unit Tests (mostly of the solids)
+You can run the tests by invoking `pytest` after activating the virtual environment and changing to the project directory:
+
+```bash
+pytest -v
+```
