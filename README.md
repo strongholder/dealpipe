@@ -93,6 +93,17 @@ Output artifacts, such as files, are recorded in the form of Asset Materializati
 ![Asset Materialization link in Event Log](img/asset_materialization1.png)
 ![Asset Materialization View](img/asset_materialization2.png)
 
+### Running from CLI
+
+You can also run the pre-defined pipeline presets from terminal with the `dagster` command:
+
+```bash
+dagster pipeline execute -f dealpipe/pipelines/process_deals.py --preset valid_csv_example
+dagster pipeline execute -f dealpipe/pipelines/process_deals.py --preset invalid_csv_example
+dagster pipeline execute -f dealpipe/pipelines/process_deals.py --preset valid_xlsx_example
+dagster pipeline execute -f dealpipe/pipelines/process_deals.py --preset invalid_xlsx_example
+```
+
 ### Running the tests
 
 You can run the tests by invoking `pytest` after activating the virtual environment and changing to the project directory:
