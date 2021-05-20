@@ -69,13 +69,13 @@ Once you've set up your virtual environment and activated it you can run and deb
 There are configuration presets which you can use to run the pipeline - they are placed in the 'presets' directory. 
 You can easily run the pipeline with all configuration presets in `dagit` by starting it like so:
 ```
-dagit -f dealpipe/process_deals.py -h 0.0.0.0 -p 3000
+dagit
 ```
 
-Click [this link to see the Pipeline DAG Definition](http://localhost:3000/workspace/__repository__process_deals@process_deals.py/pipelines/process_deals/)
+Click [this link to see the Pipeline DAG Definition](http://localhost:3000/workspace/dealpipe@dealpipe.repository/pipelines/process_deals/)
 
 When you are ready to run the pipeline navigate to the playground by opening the following link:
-[Dagit pipeline playground](http://localhost:3000/workspace/__repository__process_deals@process_deals.py/pipelines/process_deals/playground)
+[Dagit pipeline playground](http://localhost:3000/workspace/dealpipe@dealpipe.repository/pipelines/process_deals/playground)
 Now just pick the desired preset from the `Preset` dropdown and then hit the `Launch Execution` button (bottom right).
 
 After you click the `Launch Execution` button the pipeline is started and you can see the execution chart and log in real time.

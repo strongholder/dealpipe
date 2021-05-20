@@ -2,6 +2,7 @@ from pathlib import Path
 
 from dagster import ModeDefinition, PresetDefinition, pipeline
 
+import dealpipe
 from dealpipe.solids.loader import load_deals_file
 from dealpipe.solids.lookups import load_deals_lookup
 from dealpipe.solids.postprocessor import postprocess
@@ -11,7 +12,7 @@ from dealpipe.solids.writer import save_output
 
 MODE_DEV = ModeDefinition(name="dev", resource_defs={})
 MODE_TEST = ModeDefinition(name="test", resource_defs={})
-PRESET_PATH = Path(__file__).parent.parent / Path("presets").absolute()
+PRESET_PATH = Path(dealpipe.__file__).parent.parent / "presets"
 
 INVALID_XLSX_PRESET = PresetDefinition.from_files(
     "invalid_xlsx_example",
