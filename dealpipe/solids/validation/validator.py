@@ -2,8 +2,8 @@ import great_expectations as ge
 from dagster import EventMetadataEntry, Output, OutputDefinition, SolidExecutionContext, solid
 from pandas import DataFrame
 
+from dealpipe.lookups import LookupDict
 from dealpipe.solids.validation.expectations import build_deals_expectation_suite, render_validation_result_markdown
-from dealpipe.solids.validation.types import LookupDict
 
 
 @solid(

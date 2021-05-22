@@ -3,7 +3,8 @@ import decimal
 from dagster import EventMetadataEntry, InputDefinition, Output, OutputDefinition, SolidExecutionContext, solid
 from pandas import DataFrame
 
-from dealpipe.solids.validation.types import DealsDataFrame, LookupDict
+from dealpipe.lookups import LookupDict
+from dealpipe.solids.validation.types import DealsDataFrame
 
 COL_TYPES = {
     "RowNo": "int64",

@@ -1,10 +1,6 @@
-from typing import Any, Dict
-
 from dagster_pandas import PandasColumn, create_dagster_pandas_dataframe_type
 from dagster_pandas.constraints import ColumnDTypeFnConstraint
 from pandas.core.dtypes.common import is_object_dtype
-
-LookupDict = Dict[str, Any]
 
 DealsDataFrame = create_dagster_pandas_dataframe_type(
     name="DealsDataFrame",

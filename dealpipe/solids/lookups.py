@@ -1,7 +1,6 @@
 from dagster import EventMetadataEntry, Output, OutputDefinition, solid
 
-from dealpipe import reader
-from dealpipe.solids.validation.types import LookupDict
+from dealpipe.lookups import LookupDict, build_lookups
 
 
 @solid(
@@ -9,15 +8,8 @@ from dealpipe.solids.validation.types import LookupDict
     output_defs=[OutputDefinition(dagster_type=LookupDict)],
 )
 def load_deals_lookup(context):
-    lookup = {}
     lookups_file = context.solid_config["lookups_file"]
-    result = reader.read(lookups_file, sheet=1)
-
-    lookup = dict(
-        companies=dict(zip(result["CompanyId"], result["CompanyName"])),
-        currencies=result["Currencies"].dropna().unique().tolist(),
-        countries=result["Countries"].dropna().unique().tolist(),
-    )
+    lookup = build_lookups(lookups_file)
 
     meta_stats = EventMetadataEntry.json(
         data=lookup,
