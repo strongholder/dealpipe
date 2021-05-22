@@ -34,6 +34,16 @@ VALID_CSV_PRESET = PresetDefinition.from_files(
     config_files=[str(PRESET_PATH / Path("valid_csv_preset.yaml"))],
     mode="dev",
 )
+INVALID_YAML_PRESET = PresetDefinition.from_files(
+    "invalid_yaml_example",
+    config_files=[str(PRESET_PATH / Path("invalid_yaml_preset.yaml"))],
+    mode="dev",
+)
+VALID_YAML_PRESET = PresetDefinition.from_files(
+    "valid_yaml_example",
+    config_files=[str(PRESET_PATH / Path("valid_yaml_preset.yaml"))],
+    mode="dev",
+)
 
 
 @pipeline(
@@ -43,6 +53,8 @@ VALID_CSV_PRESET = PresetDefinition.from_files(
         VALID_XLSX_PRESET,
         INVALID_CSV_PRESET,
         VALID_CSV_PRESET,
+        INVALID_YAML_PRESET,
+        VALID_YAML_PRESET,
     ],
 )
 def process_deals():

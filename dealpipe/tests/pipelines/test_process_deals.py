@@ -7,8 +7,10 @@ from dagster import AssetMaterialization, DagsterEventType, ExperimentalWarning,
 from dealpipe.pipelines.process_deals import (
     INVALID_CSV_PRESET,
     INVALID_XLSX_PRESET,
+    INVALID_YAML_PRESET,
     VALID_CSV_PRESET,
     VALID_XLSX_PRESET,
+    VALID_YAML_PRESET,
     process_deals,
 )
 
@@ -130,3 +132,9 @@ class TestProcessDealsPipeline(unittest.TestCase):
 
     def test_invalid_csv(self):
         self.run_invalid_test(INVALID_CSV_PRESET)
+
+    def test_valid_yaml(self):
+        self.run_valid_test(VALID_YAML_PRESET)
+
+    def test_invalid_yaml(self):
+        self.run_invalid_test(INVALID_YAML_PRESET)

@@ -1,12 +1,19 @@
 import pandas as pd
 from dagster import solid
-from pandas import DataFrame, read_csv, read_excel
+from pandas import DataFrame
 
-from dealpipe.mime import is_excel
+from dealpipe import reader
 
 
 def to_numeric(x):
     return pd.to_numeric(x, errors="ignore")
+
+
+def build_converters():
+    converters = {f"D{i}": to_numeric for i in range(1, 6)}
+    converters["CompanyId"] = to_numeric
+
+    return converters
 
 
 @solid(
@@ -15,12 +22,4 @@ def to_numeric(x):
 def load_deals_file(context) -> DataFrame:
     deals_file = context.solid_config["deals_file"]
 
-    converters = {f"D{i}": to_numeric for i in range(1, 6)}
-    converters["CompanyId"] = to_numeric
-
-    if is_excel(deals_file):
-        result = read_excel(deals_file, converters=converters)
-    else:
-        result = read_csv(deals_file, converters=converters)
-
-    return result
+    return reader.read(deals_file, build_converters())

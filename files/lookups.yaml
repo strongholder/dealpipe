@@ -1,0 +1,26 @@
+---
+-
+    CompanyId: 1
+    CompanyName: Amazon
+    Currencies: USD
+    Countries: USA
+-
+    CompanyId: 2
+    CompanyName: Microsoft
+    Currencies: GBP
+    Countries: GBR
+-
+    CompanyId: 3
+    CompanyName: Google
+    Currencies: BGN
+    Countries: BGR
+-
+    CompanyId: 4
+    CompanyName: Bulgaria Air
+    Currencies: 
+    Countries: 
+-
+    CompanyId: 5
+    CompanyName: Barclays
+    Currencies: 
+    Countries: 

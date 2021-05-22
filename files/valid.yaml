@@ -1,0 +1,45 @@
+---
+-
+    DealName: Kindle Paperwhite
+    D1: 12.22322
+    D2: 15.33333
+    D3: 18.0001
+    D4: 9.999999
+    D5: 5.3
+    IsActive: "Yes"
+    CountryCode: USA
+    CurrencyCode: USD
+    CompanyId: 1
+-
+    DealName: Surface Pro
+    D1: 123.22
+    D2: 11
+    D3: 22.12222
+    D4: 14.2
+    D5: 123123.123123
+    IsActive: "Yes"
+    CountryCode: USA
+    CurrencyCode: USD
+    CompanyId: 2
+-
+    DealName: Glass
+    D1: -12.33
+    D2: 221.22
+    D3: 
+    D4: 5.33
+    D5: 11.2
+    IsActive: "yes"
+    CountryCode: USA
+    CurrencyCode: USD
+    CompanyId: 3
+-
+    DealName: Airbus A320
+    D1: 22219387192.1293
+    D2: 
+    D3: 
+    D4: 
+    D5: 
+    IsActive: "no"
+    CountryCode: BGR
+    CurrencyCode: BGN
+    CompanyId: 4

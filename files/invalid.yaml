@@ -1,0 +1,100 @@
+---
+-
+    DealName: Kindle Paperwhite
+    D1: 12.22322
+    D2: 15.33333
+    D3: 18.0001
+    D4: 9.999999
+    D5: 5.3
+    IsActive: "Yes"
+    CountryCode: USA
+    CurrencyCode: USD
+    CompanyId: 1
+-
+    DealName: Kindle
+    D1: 
+    D2: 15.33333
+    D3: 18.0001
+    D4: 9.999999
+    D5: 5.3
+    IsActive: "No"
+    CountryCode: USA
+    CurrencyCode: USD
+    CompanyId: 1
+-
+    DealName: Surface Pro
+    D1: 123.22
+    D2: 11
+    D3: 22.12222
+    D4: 14.2
+    D5: 123123.1231
+    IsActive: "Yes"
+    CountryCode: USA
+    CurrencyCode: USD
+    CompanyId: 2
+-
+    DealName: Glass
+    D1: -12.33
+    D2: 221.22
+    D3: 
+    D4: 5.33
+    D5: 11.2
+    IsActive: "yes"
+    CountryCode: USA
+    CurrencyCode: USD
+    CompanyId: 3
+-
+    DealName: Airbus A320
+    D1: 22219387192
+    D2: 
+    D3: 
+    D4: 
+    D5: 
+    IsActive: "no"
+    CountryCode: BGR
+    CurrencyCode: BGN
+    CompanyId: 4
+-
+    DealName: Item
+    D1: 122.3314453
+    D2: 
+    D3: 
+    D4: 
+    D5: 
+    IsActive: "Yes"
+    CountryCode: GBR
+    CurrencyCode: 
+    CompanyId: 5
+-
+    DealName: Item 1
+    D1: 125
+    D2: 
+    D3: 
+    D4: 
+    D5: 
+    IsActive: "Y"
+    CountryCode: 
+    CurrencyCode: GBP
+    CompanyId: 5
+-
+    DealName: Item 2
+    D1: 125
+    D2: 
+    D3: 
+    D4: 
+    D5: 
+    IsActive: "N"
+    CountryCode: invalid
+    CurrencyCode: GBP
+    CompanyId: 5
+-
+    DealName: 
+    D1: 
+    D2: invalid
+    D3: invalid
+    D4: invalid
+    D5: invalid
+    IsActive: invalid
+    CountryCode: invalid
+    CurrencyCode: invalid
+    CompanyId: invalid
