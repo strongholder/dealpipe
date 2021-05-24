@@ -1,11 +1,11 @@
 solids:
-  load_deals_file:
+  load_deals:
     config:
       deals_file: "files/valid.yaml"
   load_deals_lookup:
     config:
       lookups_file: "files/lookups.yaml"
-  save_error_report:
+  save_errors:
     config:
       errors_excel_file: "output/deals_errors.xlsx"
   save_output:
