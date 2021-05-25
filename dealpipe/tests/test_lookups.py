@@ -20,4 +20,4 @@ class TestLookups(TestCase):
 
         lookup = build_lookups("lookups.csv")
 
-        assert lookup == {"companies": {1: "A", 2: "B"}, "currencies": ["EUR", "USD"], "countries": ["IRL", "USA"]}
+        assert lookup == {"companies": {1: "A", 2: "B"}, "currencies": {"EUR", "USD"}, "countries": {"IRL", "USA"}}

@@ -1,5 +1,5 @@
 DealName,D1,D2,D3,D4,D5,IsActive,CountryCode,CurrencyCode,CompanyId
 Kindle Paperwhite,12.22322,15.33333,18.0001,9.999999,5.3,Yes,USA,USD,1
 Surface Pro,123.22,11,22.12222,14.2,123123.123123,Yes,USA,USD,2
-Glass,-12.33,221.22,,5.33,11.2,yes,USA,USD,3
-Airbus A320,22219387192.1293,,,,,no,BGR,BGN,4
+Glass,-12.33,221.22,,5.33,11.2,Yes,USA,USD,3
+Airbus A320,22219387192.1293,,,,,No,BGR,BGN,4

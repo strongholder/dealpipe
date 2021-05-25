@@ -3,12 +3,11 @@ from pathlib import Path
 from dagster import ModeDefinition, PresetDefinition, pipeline
 
 import dealpipe
-from dealpipe.solids.loader import load_deals_file
+from dealpipe.solids.loader import load_deals
 from dealpipe.solids.lookups import load_deals_lookup
-from dealpipe.solids.postprocessor import postprocess
-from dealpipe.solids.preprocessor import preprocess
-from dealpipe.solids.validation import generate_error_report, save_error_report, validate
-from dealpipe.solids.writer import save_output
+from dealpipe.solids.transform import transform
+from dealpipe.solids.validator import validate
+from dealpipe.solids.writer import save_errors, save_output
 
 MODE_DEV = ModeDefinition(name="dev", resource_defs={})
 MODE_TEST = ModeDefinition(name="test", resource_defs={})
@@ -59,9 +58,8 @@ VALID_YAML_PRESET = PresetDefinition.from_files(
 )
 def process_deals():
     deals_lookup = load_deals_lookup()
-    preprocessed_df = preprocess(load_deals_file())
-    valid, errors = validate(preprocessed_df, deals_lookup)
-    error_report_df = generate_error_report(preprocessed_df, errors)
-    save_error_report(error_report_df)
-    output_df = postprocess(preprocessed_df, deals_lookup, valid)
+    deals_df = load_deals()
+    valid_df, errors_df = validate(deals_df, deals_lookup)
+    save_errors(errors_df)
+    output_df = transform(valid_df, deals_lookup)
     save_output(output_df)
